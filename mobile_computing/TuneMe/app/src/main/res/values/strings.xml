@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">TuneMe</string>
+    <string-array name="genre">
+        <item>electronic</item>
+        <item>jazz</item>
+        <item>classical</item>
+    </string-array>
+
+    <string-array name="mode">
+        <item>speed</item>
+        <item>genre</item>
+    </string-array>
+
+    <string name="about_description">This app plays music with the tempo of your movement. It is created as a class project for Mobile Computing -- Fall 2016.</string>
+    <string name="help_description">While running, the music tempo will change</string>
+    <string name="music_credit_description">Music Copyright &#169; JanjiMusic </string>
+
+
+</resources>

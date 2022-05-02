@@ -1,0 +1,25 @@
+{% extends 'vote/base_user.html' %}
+{% block content %}        
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <p {% if message.tags == "success" %} class="alert alert-success" class="{{ message.tags }}"{% endif %}> {{message}} </p>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    
+    <div>
+        <div class="col-md-12 candidateinfo">
+            <div class="row">
+                <img src="{{candidate_info.c_image.url}}" class="img-responsive center-block">
+            </div>
+            <div class="panel-heading text-center">
+                <h3>{{candidate_info.first_name}} {{candidate_info.middle_name}} {{candidate_info.last_name}}</h3>
+            </div>
+            <p><b>Party affiliation: </b>{{candidate_info.party_affiliate}}
+            <p><b>Date of birth: </b> {{candidate_info.dob}}</p>
+            <p><b>Biography: </b>{{candidate_info.description}}</p>
+            <div class='text-center'><button type="button" class="btn btn-info"><a href="{% url 'vote:view_candidates' u_id %}" style="color:#ffffff">Return</a></button></div>
+        </div>
+    </div>
+{%endblock%}

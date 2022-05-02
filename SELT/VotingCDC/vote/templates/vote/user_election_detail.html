@@ -1,0 +1,51 @@
+{% extends 'vote/base_user.html' %}
+{% block content %}        
+
+    {% if messages %}
+        <ul class="messages">
+        {% for message in messages %}
+            <p {% if message.tags == "success" %} class="alert alert-success" class="{{ message.tags }}"{% endif %}> {{message}} </p>
+        {% endfor %}
+        </ul>
+    {% endif %}
+        
+    <div class="col-md-12 candidateinfo">
+        <div class="panel-heading text-center">
+            <h4>{{election_info.e_name}}</h4>
+        </div>
+      
+        <div class="row">
+            <div class="col-md-12">
+                 <b>Description: </b></br>
+                 <p>{{election_info.e_description}}</p>
+                 
+                <span><b>Candidates:</b></span>
+                <ul>
+                   {% for name, id in name_list %}
+                        {% for can in candidates %}
+                            {% if name == can %}
+                                 <li><a href="{% url 'vote:candidates_detail' id %}">{{can}}</a></li>
+                            {% endif %}
+                        {% endfor %}
+                    {% endfor %}
+                </ul> 
+                
+                <p><b>Position: </b>{{election_info.position}}</p>
+                <span><b>Precincts ranges: </span>
+                
+                <ul>
+                    {% for pre in precincts_range %}
+                        <li>{{pre}}</li>
+                    {% endfor %}
+                </ul>
+                
+                <p><b>Start Date:</b>{{election_info.start_date}}</p>
+                <p><b>End Date:</b>{{election_info.end_date}}</p>
+            </div>
+        </div>
+        
+        <div class='text-center'>
+            <p><span><button type="button" class="btn btn-info"><a href="{% url 'vote:election_update' election_info.e_id %}" style="color:#ffffff">Vote</a></button> &nbsp; &nbsp;</span></p>
+        </div>
+    </div>
+{%endblock%}

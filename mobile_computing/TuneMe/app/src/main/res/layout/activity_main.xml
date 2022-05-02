@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- created by wenxue -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="mobile.tuneme.MainActivity">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:id="@+id/LinearLayout2"
+        android:layout_height="180dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            app:srcCompat="@drawable/lll"
+            android:id="@+id/logo"
+            android:layout_height="50dp" />
+
+        <ImageView
+            android:id="@+id/pic"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ddd"
+            android:layout_width="wrap_content" />
+    </LinearLayout>
+
+    <TextView
+            android:text="SongName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/music_name"
+            android:layout_below="@+id/LinearLayout2"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true" />
+
+    <SeekBar
+        style="@style/Widget.AppCompat.SeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekbar"
+        android:background="@color/colorPrimaryDark"
+        android:layout_marginTop="29dp"
+        android:thumb="@android:drawable/presence_online"
+        android:progressTint="@android:color/holo_green_light"
+        android:layout_below="@+id/music_name"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="false"
+        android:layout_centerInParent="false"
+        android:clickable="true" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/LinearLayout3"
+        android:layout_below="@+id/seekbar">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/current"
+            android:textColor="@android:color/white"
+            android:textStyle="normal|bold"
+            android:textSize="18sp"
+            android:layout_weight="1"
+            android:layout_marginLeft="7dp" />
+
+        <TextView
+
+            android:layout_height="wrap_content"
+            android:id="@+id/duration"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:textStyle="normal|bold"
+            android:layout_width="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:layout_marginLeft="220dp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/LinearLayout1"
+        android:layout_below="@+id/LinearLayout3"
+        android:layout_marginTop="30dp">
+
+
+        <Spinner
+            android:layout_width="140dp"
+            android:layout_height="30dp"
+            android:id="@+id/spinner_genre"
+            android:layout_alignBaseline="@+id/next"
+            android:layout_alignBottom="@+id/next"
+            android:layout_toStartOf="@+id/play"
+            android:layout_weight="1"
+            android:background="@android:color/background_light" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:id="@+id/play"
+            android:layout_alignBaseline="@+id/next"
+            android:layout_alignBottom="@+id/next"
+            android:layout_toStartOf="@+id/next"
+            android:background="@drawable/play"
+            android:layout_weight="1"
+            android:layout_marginLeft="50dp" />
+
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:id="@+id/next"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/next"
+            android:layout_weight="1"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="30dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/LinearLayout4"
+        android:layout_below="@id/LinearLayout1"
+        android:layout_marginTop="50dp">
+
+        <Spinner
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:id="@+id/spinner_mode"
+            android:layout_weight="1"
+            android:background="@android:color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tempo"
+            android:textSize="30sp"
+            android:textColor="@android:color/white"
+            android:textStyle="normal|bold"
+            android:text="speed:          "
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp" />
+    </LinearLayout>
+
+
+</RelativeLayout>

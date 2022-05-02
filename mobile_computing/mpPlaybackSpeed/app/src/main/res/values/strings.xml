@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">TuneMePlayer</string>
+    <string name="playback">&gt;</string>
+    <string name="pause">||</string>
+    <string name="appTitle">TuneMe</string>
+    <string name="theme">feel your beats...</string>
+    <string name="spinner_title">Select Tempo</string>
+    <string name="next">&gt;&gt;</string>
+    <color name="about_background">#53bdaf</color>
+    <color name="about_white">#ffffff</color>
+    <color name="appTitle_color">#808080</color>
+    <color name="theme_color">#53bdaf</color>
+    <string-array name="spinner_array">
+        <item>Slow</item>
+        <item>Normal</item>
+        <item>Fast</item>
+    </string-array>
+    <string name="about_description">This app plays music with the tempo of your movement. It is created as a class project for Mobile Computing -- Fall 2016.</string>
+
+    <string name="music_credit_description">Music Copyright &#169; JanjiMusic </string>
+    <color name="music_credit_color">#ffffff</color>
+
+</resources>
